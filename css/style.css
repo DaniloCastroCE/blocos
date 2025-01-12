@@ -23,6 +23,7 @@ h1 {
     background-color: #003366;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease, color 0.3s ease;
+    animation: moveBaixo 1.3s ease forwards;
 }
 
 
@@ -45,10 +46,6 @@ h1 {
     transition: transform 0.3s ease-in-out;
     margin: 2px 20px;
     min-height: 520px;
-}
-
-.card:hover {
-    transform: scale(1.05);
 }
 
 .img-card {
@@ -93,6 +90,7 @@ h1 {
 
 .botao-card:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 footer {
@@ -112,6 +110,14 @@ footer span {
     border-radius: 100px 100px 0 0;
 }
 
+#card1 {
+    animation: moveDir 1.3s ease forwards;
+}
+
+#card2 {
+    animation: moveEsq 1.3s ease forwards;
+}
+
 @media (max-width: 768px){
     .cards {
         flex-direction: column;
@@ -122,7 +128,40 @@ footer span {
         margin-bottom: 20px;
     }
 
-    .card:hover{
-         transform: none;       
+}
+
+@keyframes moveDir {
+    from {
+        transform: translateX(-800px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveEsq {
+    from {
+        transform: translateX(800px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveBaixo {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

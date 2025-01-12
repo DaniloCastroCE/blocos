@@ -132,7 +132,7 @@ footer span {
 
 @keyframes moveDir {
     from {
-        transform: translateX(-800px);
+        transform: translateX(-400px);
         opacity: 0;
     }
 
@@ -144,7 +144,7 @@ footer span {
 
 @keyframes moveEsq {
     from {
-        transform: translateX(800px);
+        transform: translateX(400px);
         opacity: 0;
     }
 

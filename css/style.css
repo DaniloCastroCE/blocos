@@ -37,7 +37,8 @@ h1 {
 }
 
 .card {
-    width: 500px;
+    max-width: 500px;
+    min-width: 350px;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
